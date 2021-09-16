@@ -5,7 +5,7 @@ function showNav(){
     const links =[
         {
           label: "Week1 notes",
-          url: "week1/week1.html"
+          url: "Week1/week1.html"
         }
         // {
         //   label: "Week2 notes",
