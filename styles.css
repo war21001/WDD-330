@@ -30,8 +30,8 @@ main{
 main .week1{
     display:block;
 }
-.week1 li{
-    list-style: circle;
+.week1 ul li{
+    list-style: disc;
 }
 img{
     grid-column: 1;
