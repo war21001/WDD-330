@@ -4,7 +4,7 @@ function showNav(){
     // links to the files for my directory
     const links =[
         {
-          label: "Week1 notes",
+          label: "Week1 Notes",
           url: "Week1/week1.html"
         }
         // {
