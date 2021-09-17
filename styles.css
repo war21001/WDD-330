@@ -27,7 +27,7 @@ main{
     grid-template-columns: 1fr 1fr;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-main .week1{
+.week1 main {
     display:inline;
 }
 .week1 ul li{
