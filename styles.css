@@ -28,7 +28,7 @@ main{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 main .week1{
-    display:block;
+    display:inline;
 }
 .week1 ul li{
     list-style: disc;
