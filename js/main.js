@@ -7,10 +7,10 @@ function showNav(){
           label: "Week1 Notes",
           url: "Week1/week1.html"
         }
-        // {
-        //   label: "Week2 notes",
-        //   url: "week2/week2.html"
-        // }
+        {
+          label: "Week2 notes",
+          url: "week2/week2.html"
+        }
     ];    
     //finds the ordered list in the index page
     const ul= document.querySelector("ul");
