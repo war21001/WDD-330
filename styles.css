@@ -48,6 +48,7 @@ li{
 }
 a {
     text-decoration: none;
+    padding: 2em;
 }
 footer{
     text-align: center;

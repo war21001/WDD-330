@@ -4,13 +4,13 @@ function showNav(){
     // links to the files for my directory
     const links =[
         {
-          label: "Week1 Notes",
+          label: "Week 1 Notes",
           url: "Week1/week1.html"
         },
         {
-          label: "Week2 notes",
+          label: "Week 2 Notes",
           url: "week2/week2.html"
-        }
+        },
     ];    
     //finds the ordered list in the index page
     const ul= document.querySelector("ul");
