@@ -6,7 +6,7 @@ function showNav(){
         {
           label: "Week1 Notes",
           url: "Week1/week1.html"
-        }
+        },
         {
           label: "Week2 notes",
           url: "week2/week2.html"
