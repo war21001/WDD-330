@@ -9,7 +9,7 @@ function showNav(){
         },
         {
           label: "Week 2 Notes",
-          url: "week2/week2.html"
+          url: "Week2/week2.html"
         },
     ];    
     //finds the ordered list in the index page
