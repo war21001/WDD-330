@@ -11,6 +11,10 @@ function showNav(){
           label: "Week 2 Notes",
           url: "Week2/week2.html"
         },
+        {
+          label: "Week 3 Notes",
+          url: "Week3/week3.html"
+        },
     ];    
     //finds the ordered list in the index page
     const ul= document.querySelector("ul");
