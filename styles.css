@@ -31,7 +31,10 @@ main{
     display:block;
 }
 .week1 ul li{
-    list-style: disc;
+    /* list-style: disc; */
+    list-style: none;
+    padding:2em;
+    
 }
 img{
     grid-column: 1;
@@ -41,9 +44,7 @@ ul {
     grid-column: 2;
     padding: 3px;   
 }
- li{
-    list-style: none;
-}
+
 a {
     text-decoration: none;
    
