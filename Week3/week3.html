@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 3 Notes</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header><h1>Week 3 Notes</h1></header>
+    <div class="week1">
+        <main>
+            <h2>Array and Array functions, DOM and Events</h2>
+
+            <h3>“this” </h3>
+            <p>This is a keyword whose value changes depending on how a function gets called</p>
+            <ol>
+                <li>Global context - called outside functions</li>
+                <li>Object construction - create with new, refers to instance></li>
+                <li>Object method - refers to object itself</li>
+                <li>Simple function - set to window dash create variable to fix</li>
+                <li>Arrow function - same as this around it - scope </li>
+                <li>Event listener - set to element that fired event</li>
+            </ol>
+            <h3>Object literals</h3>
+            <ul>
+                <li>And self contained set of related values and functions collection of named properties that map to any JavaScript value. Functions are methods that can inherit properties from other objects</li>
+                <li>Keeps related information and functionality together</li>
+                <li>Wrapping curly braces</li>
+                <li>Useful way of organizing code without polluting global namespace</li>
+                <li>access properties by using dot notation or brackets</li>
+                <li>calling methods buy dot notation or brackets with parentheses</li>
+                <li>hasOwnProperty()</li>
+                <li>for in loop will go through all the object properties and methods</li>
+                <li>objects are assigned by reference meaning variable is assigned to an object that already exists</li>
+            </ul>
+            <h3>JSON</h3>
+                <ul>
+                    <li>JavaScript object notation</li>
+                    <li>data storage format, exchange info between web services both human and machine readable</li>
+                    <li>Property names must be double quoted</li>
+                    <li>Permitted values are double quoted strings, numbers, true, false, null ,arrays, and objects</li>
+                    <li>Functions are not permitted values</li>
+                </ul>
+          
+
+            <h3>Math</h3>
+            <ul>
+                <li>Built in object that has several properties representing mathematical constants as well as methods</li>
+                <li>Unable to change</li>
+                <li>Max and min methods, trig, rounded numbers, data objects, etc.</li>
+            </ul>
+            <h3>Regular Expressions</h3>
+            <ul>
+                <li>A pattern that can be used to search strings for matches to the pattern => find and replace</li>
+                <li>Create=> /[a-z] [A-Z] + int$/;</li>
+                <li>Sequence uses the dash</li>
+                <li>\^  negates the sequence</li>
+                <li>Properties</li>
+                    <ul>
+                        <li>global (g)- Return all matches</li>
+                        <li>Ignore case (i) -pattern is case insensitive, default is case sensitive</li>
+                        <li>multi line (m) - make pattern on multiple line</li>
+                    </ul>
+                <li>Special Characters</li>
+                    <ul>
+                        <li>. Matches any character, except line breaks</li>
+                        <li>\w matches any word, an is equivalent to [A-Z a-z 0-9 ]</li>
+                        <li>\W Matches nonword characters [\^  A-Z a-z 0-9 ]</li>
+                        <li>\d Digits [0-9]</li>
+                        <li>\D non digits [\^ 0-9]</li>
+                        <li>\s white space [\t \r \n \f] </li>
+                        <li>\S [\^ \t \r \n \f]</li>
+                    </ul>
+                <li>Modifiers - placed after token to deal with multiple occurrences</li>
+                <ul>
+                    <li>? Optional</li>
+                    <li>* Matches one or more occurrences preceding</li>
+                    <li>+ matches one or more currents is proceeding</li>
+                    <li>{n} matches at matches n occurrences of pattern</li>
+                    <li>{n,} matches one or more n occurrence is a pattern</li>
+                    <li>{,m} matches at most M occurrences preceding token</li>
+                    <li>{n,m} matches at least n but no more than M occurrences</li>
+                    <li>^ marks the position immediately before the first character in a string</li>
+                    <li>$ marks the position immediately after the last character</li>
+                    <li>when needed use the\ to escape out</li>
+                </ul>
+
+            </ul>
+            <h3>Document object model (DOM)</h3>
+            <ul>
+                <li>HTML document as a network of connected nodes that form a tree like structure</li>
+                <li>Treats everything as an node even white space</li>
+                <li>HTML tag is root</li>
+                <li>Legacy DOM shortcut methods- use index notation to access</li>
+                <ul>
+                    <li>document.body, document.links, document.forms, document.images, document. Anchors</li>
+                </ul>
+                <li>getElementByIc(), getElementsByTagName(), getElementClassName()</li>
+                <li>Navigating the DOM tree</li>
+                <ul>
+                    <li>children nodes - children of an element</li>
+                    <li>children, first child, last child, parent node, next doubling, previous sibling</li>
+                    <li>and then finding a value of a node use dot notation</li>
+                </ul>
+            </ul>
+            <h3>Creating Dynamic Markup</h3>
+            <ul>
+                <li>createElement() tag has a parameter an returns element</li>
+                <li>createTextNode() - string parameter that is text for element</li>
+                <li>appendChild() - add another note as a child node</li>
+            </ul>
+            <h3>Events</h3>
+            <ul>
+                <li>Event listeners tells the program when an event has occurred such as a mouse click, keypress, screen touch</li>
+                <li>multiple functions can be attached independently two different events</li>
+                <li>Whenever an event handler is triggered by an invent the callback function is called. Function is automatically passed on an event object as a parameter that contains information about the event</li>
+                <li>Event propagation - the order that events fire on each element</li>
+                <ul>
+                    <li>Bubbling - Fires element clicked on first then bubbles up the document tree, firing an event on each parent element until it reaches the root node</li>
+                    <li>Capturing- starts by firing an event on the root element, then propagates downward, firing each child element until it reaches the target element that was clicked on see</li>
+                </ul>
+            </ul>
+        </main>
+        </div>
+        </body>
+        </html>
