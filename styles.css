@@ -33,7 +33,7 @@ main{
 .week1 ul li{
     /* list-style: disc; */
     list-style: none;
-    padding:1em;
+    padding:.25em;
     
 }
 img{
