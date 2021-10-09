@@ -1,4 +1,5 @@
 const form = document.forms['hero'];
+
 form.addEventListener('submit', makeHero, false);
 
 function makeHero(event) {
@@ -22,8 +23,32 @@ function makeHero(event) {
     hero.age = form.age.value;
 
     hero.origin = form.origin.value;
-    
-    alert(JSON.stringify(hero)); // convert object to JSON string and display in alert dialog
+
+    // alert(JSON.stringify(hero)); // convert object to JSON string and display in alert dialog
     return hero;
 }
 
+form.addEventListener('submit',validateInline,false);
+
+function validate(event) {
+    const firstLetter = form.heroName.value[0];
+    if (firstLetter.toUpperCase() === 'X') {
+        event.preventDefault();
+        alert('Your name is not allowed to start with X!');
+    }
+}
+
+const label = form.querySelector('label');
+const error = document.createElement('div');
+error.classList.add('error');
+error.textContent = '! Your name is not allowed to start with X.';
+label.append(error);
+
+function validateInline() {
+    const heroName = this.value.toUpperCase();
+    if(heroName.startsWith('X')){
+        error.style.display = 'block';
+    } else {
+        error.style.display = 'none';
+    }
+}
