@@ -21,7 +21,7 @@ function showNav(){
         },
         {
           label: "Week 5 Notes",
-          url: "Week5/week4.html"
+          url: "Week5/week5.html"
         },
     ];    
     //finds the ordered list in the index page
