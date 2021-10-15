@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 5 Notes</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header><h1>Week 5 Notes</h1></header>
+    <div class="week1">
+    <main>                
+        <h2>Testing and Debugging</h2>
+        <h4>Errors, Exceptions, and Warnings</h4>
+            <ul>
+                <li><strong>System Error - </strong>There's a problem with the system or external devices with which the program is interacting</li>
+                <li><strong>Programmer Error - </strong>The program contains incorrect syntax or faulty logic; it could een be as simple as a type</li>
+                <li<strong>UserError - </strong>The user entered data correctly, which the program is unable to handle</li>
+                <li><strong>Exceptions - </strong>an error that produces a return value that can then be used by the program to deal wit the error</li>
+                <li><strong>Stack Traces - </strong>an exception will produce. Sequence of functions/method calls that lead to the point where the error occurred.</li>
+                <li><strong>Warnings - </strong>occurs if an error in the code that isn't enough to cause a program to crash</li>
+            </ul>
+        <h4>Importance of Testing and Debugging</h4>
+            <ul>
+                <li>write code to fail loudly</li>      
+            </ul>
+        <h4>Strict Mode</h4>
+            <ul>
+                <li>produces more exceptions and warnings and prohibits the use of some deprecated features</li>
+                <li>help improve clarity and speed</li>
+                <li>'use strict';</li>      
+                <li>linting tools - JSLint, JSHint, Es lint</li>  
+                <ul>
+                    <li>highlight sloppy programming practices</li>
+                    <li>syntax errors</li>
+                    <li>complain if certain style conventions are not followed</li>      
+                    <li>Style guide</li>  
+                </ul>
+            </ul>
+        <h4>Freature Detection</h4>
+            <ul>
+                <li>if statement to see if browser supports the method</li>
+                <li>modernizer</li>
+                <li>browswer sniffing</li>  
+            </ul>        
+        <h4>Debugging in the Browser</h4>
+            <ul>
+                <li>process of finding out where bugs occur in the code and then dealing with them</li>
+                <li>breakpoints</li>
+                <li>alert()</li>
+                <li>use the console - console.log, console.trace()</li>
+                <li>debugger keyword - make sure to take out</li>   
+            </ul>
+        <h4>Error Objects</h4>
+            <ul>
+                <li>can be created by the host environment when an excetion occurs, or in the code with a constructor function -> const error = new Error();</li>
+                <li>EvalError, RangeError, Syntax Error, TypeError, URIError, InternalError</li>
+                <li>properties - name, message, error, stack</li>      
+                <li>Throwing Exceptions</li>  
+                <ul>
+                    <li>throw statement</li>
+                    <li>throw an error object</li>
+                    <li>catch block</li>       
+                </ul>
+            </ul>    
+        <h4>Excetion Handling</h4>
+            <ul>
+                <li>when an error occurs, the program termeinates with an error message</li>
+                <li>try, catch, finally</li>
+            </ul> 
+        <h4>Tests</h4>
+            <ul>
+                <li>can simply be a function that tests a piece of code runs as it should</li>
+                <li>Test-driven development (TDD) - process of writing tests before any actual code</li>
+            </ul>   
+        <h4>WorkFlow</h4>
+            <ul>
+            <li><ol>
+                <li>write tests (that intially fail)</li>
+                <li>write code to pass the tests</li>
+                <li>refactor the code</li>  
+                <li>Test refactored code</li>
+                <li>write more tests for new features</li> 
+            </ol> </li>
+            <li >Testing frameworks - provide a structure to write meaningful test and then run them</li>      
+            <li>Jest</li>
+        </ul>
+        </main> 
+    </div>
+    
+    <hr />
+    <footer>
+      <!-- <div class="internal_link"><p><a href="#CSAssign">Go Back to the Top</a></p></div> -->
+      <div class="copyright">
+        <p>&copy; 2021 Portfolio- Lisa Ward WDD330- Web FrontEnd II
+      </p>
+    </div>
+    </footer>
+
+</body>
+
+</html>
