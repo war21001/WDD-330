@@ -4,6 +4,32 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="todo.css">
 <title>To Do List</title>
+<script>
+  function toggleView(view){
+    console.log("made it");
+    var viewAll = document.getElementById("all");
+    var viewActive = document.getElementById("active");
+    var viewCompleted = document.getElementById("completed");
+
+    if (view === 'all'){
+        viewCompleted.style.display= "none";
+        viewActive.style.display= "none";
+        viewAll.style.display="block";
+    }
+    if(view === 'active'){
+        viewActive.style.display="block";
+        viewAll.style.display="none";
+        viewCompleted.style.display= "none";    
+    }
+    if(view === 'completed'){
+        viewActive.style.display="none";
+        viewAll.style.display="none";
+        viewCompleted.style.display= "block";   
+    }
+  }
+  
+</script>
+
 </head>
 <body>
 
@@ -13,8 +39,8 @@
     <h2>To Do List</h2>
   <img src="falls.jpg" alt="Avatar" style="width:100%">
   <div class="container">
-    <button onclick="toggleViewAll">All</button>
-    <button>Completed</button> 
+    <button onclick="toggleView('all')">All</button>
+    <button onclick="toggleView('completed')">Completed</button> 
   </div>
 </div>
 
@@ -22,8 +48,8 @@
     <h2>Completed </h2>
     <img src="falls.jpg" alt="Avatar" style="width:100%">
     <div class="container">
-        <button>All</button>
-        <button>Active</button> 
+        <button onclick="toggleView('all')">All</button>
+        <button onclick="toggleView('active')">Active</button>  
     </div>
   </div>
 
@@ -31,15 +57,13 @@
     <h2>All Tasks</h2>
     <img src="falls.jpg" alt="Avatar" style="width:100%">
     <div class="container">
-        <button>Active</button> 
-        <button>Completed</button> 
+        <button onclick="toggleView('active')">Active</button>  
+        <button onclick="toggleView('completed')">Completed</button>
     </div>
   </div>
 </main>
   <script src="main.js" type="module">
-      function toggleViewAll(){
-    console.log("made it");
-}
+     
   </script>
 </body>
 </html> 

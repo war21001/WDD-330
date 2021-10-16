@@ -9,4 +9,3 @@ function onTouch(elementSelector, callback){
     // * @param {function} callback The callback function to run
 }
 
-f
