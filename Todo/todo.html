@@ -9,16 +9,16 @@
 
     <main>
 
-<div class="card" class="active">
+<div class="card" id="active">
     <h2>To Do List</h2>
   <img src="falls.jpg" alt="Avatar" style="width:100%">
   <div class="container">
-    <button>All</button>
+    <button onclick="toggleViewAll">All</button>
     <button>Completed</button> 
   </div>
 </div>
 
-<div class="card" class="completed">
+<div class="card" id="completed">
     <h2>Completed </h2>
     <img src="falls.jpg" alt="Avatar" style="width:100%">
     <div class="container">
@@ -27,7 +27,7 @@
     </div>
   </div>
 
-  <div class="card" class="all">
+  <div class="card" id="all">
     <h2>All Tasks</h2>
     <img src="falls.jpg" alt="Avatar" style="width:100%">
     <div class="container">
@@ -36,6 +36,10 @@
     </div>
   </div>
 </main>
-  <script src="main.js" type="module"></script>
+  <script src="main.js" type="module">
+      function toggleViewAll(){
+    console.log("made it");
+}
+  </script>
 </body>
 </html> 
