@@ -12,6 +12,7 @@ for (var i=0; i<myTaskList.length;i++){
         deleted: false,
         checked: false,        
     });
+
     if(myTaskList[i].classList.contains('checked')){
         todoList[i].checked=true;
     }
@@ -19,7 +20,7 @@ for (var i=0; i<myTaskList.length;i++){
         todoList[i].deleted=true;
     }
  }
- upDateTaskCnt();
+
 
 //add a button to task item
 for (var i = 0; i < myTaskList.length; i++) {
@@ -30,30 +31,60 @@ for (var i = 0; i < myTaskList.length; i++) {
   myTaskList[i].appendChild(span);
 
 }
-//hid task when button is clicked
+//hide task when button is clicked
 var close = document.getElementsByClassName("close");
 
 for ( var i = 0; i < close.length; i++) {
   close[i].onclick = function() {
     var div = this.parentElement;
     div.style.display = "none";
-    div.className="deleted";
-    upDateTaskCnt(); 
+    div.className="deleted"; 
+    todoList[i].deleted=true;
+    upDateTaskCnt();
   }
 }
 var list = document.querySelector('ul');
 list.addEventListener('click', function(ev) {
+
   if (ev.target.tagName === 'LI') {
-    ev.target.classList.toggle('checked');
-    upDateTaskCnt(); 
+      
+    ev.target.classList.toggle('checked'); 
+    
+     upDateTaskCnt();
   }
 }, false);
+
+// upDateTaskCnt();
 
 
 
   // Functions
 
+//  Update the task count
+function upDateTaskCnt(){
+    console.log(todoList);
+ var myTaskList = document.getElementsByTagName("LI");
+ var taskCnt =  myTaskList.length;    
+ 
+ for (var i=0; i < myTaskList.length; i++){
+     var displayValue= myTaskList[i].style.display;
+     var ch = myTaskList[i].classList.contains('checked');
+    
+     if(ch){
+          todoList[i].checked=true;
+     }
+     if(myTaskList[i].style.display==='none'){
+         todoList[i].deleted=true;
+     }
+     if (ch || (displayValue==="none")){
+         taskCnt--;
+     }
+ }
+ document.getElementById("taskCnt").innerHTML = taskCnt + " Tasks Left"; 
+ document.getElementById("taskCntCompleted").innerHTML = taskCnt + " Tasks Left"; 
+ document.getElementById("taskCntAll").innerHTML = taskCnt + " Tasks Left";
 
+}
 
 // takes input from user and adds it to the task list
 function addNewTask(){
@@ -79,8 +110,7 @@ function addNewTask(){
     for (var i=0; i < close.length; i++){
         close[i].onclick=function(){
             var div = this.parentElement;
-            div.style.display="none";   
-            upDateTaskCnt();        
+            div.style.display="none";           
         }
     }
     todoList.push({
@@ -89,7 +119,7 @@ function addNewTask(){
         checked: false,        
     });
     upDateTaskCnt();
-  }
+ }
 
   // all task view
   function showAllTasks(){
@@ -111,10 +141,6 @@ function addNewTask(){
     for(var i=0;i<todoList.length;i++){
       if ((todoList[i].checked)===true){
           outputString += `<li class="checked">  ${todoList[i].key} </li>`;
-    //   }else if((todoList[i].deleted)===true){
-    //       outputString += `<li class="deleted">  ${todoList[i].key} </li>`;
-    //   }else{
-    //       outputString += `<li>  ${todoList[i].key} </li>`;
       }
   }
   document.getElementById("taskListComplete").innerHTML=outputString;      
@@ -130,49 +156,19 @@ function addNewTask(){
         viewActive.style.display="block";
         viewAll.style.display="none";
         viewCompleted.style.display= "none"; 
-        upDateTaskCnt();   
     }
     if (view === 'all'){
         viewCompleted.style.display= "none";
         viewActive.style.display= "none";
         viewAll.style.display="block";
-        
-        upDateTaskCnt();   
         showAllTasks();      
     }
     
     if(view === 'completed'){
         viewActive.style.display="none";
         viewAll.style.display="none";
-        viewCompleted.style.display= "block"; 
-        
-        upDateTaskCnt(); 
+        viewCompleted.style.display= "block";         
         showCompletedTasks();
     }
   }
 
-//  Update the task count
-  function upDateTaskCnt(){
-       console.log(todoList);
-    var myTaskList = document.getElementsByTagName("LI");
-    var taskCnt =  myTaskList.length;    
-    
-    for (var i=0; i < myTaskList.length; i++){
-        var displayValue= myTaskList[i].style.display;
-        var ch = myTaskList[i].classList.contains('checked');
-       
-        if(ch){
-             todoList[i].checked=true;
-        }
-        if(myTaskList[i].style.display==='none'){
-            todoList[i].deleted=true;
-        }
-        if (ch || (displayValue==="none")){
-            taskCnt--;
-        }
-    }
-    document.getElementById("taskCnt").innerHTML = taskCnt + " Tasks Left"; 
-    document.getElementById("taskCntCompleted").innerHTML = taskCnt + " Tasks Left"; 
-    document.getElementById("taskCntAll").innerHTML = taskCnt + " Tasks Left";
-
-  }
