@@ -4,66 +4,71 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="todo.css">
 <title>To Do List</title>
-<script>
-  function toggleView(view){
-    console.log("made it");
-    var viewAll = document.getElementById("all");
-    var viewActive = document.getElementById("active");
-    var viewCompleted = document.getElementById("completed");
-
-    if (view === 'all'){
-        viewCompleted.style.display= "none";
-        viewActive.style.display= "none";
-        viewAll.style.display="block";
-    }
-    if(view === 'active'){
-        viewActive.style.display="block";
-        viewAll.style.display="none";
-        viewCompleted.style.display= "none";    
-    }
-    if(view === 'completed'){
-        viewActive.style.display="none";
-        viewAll.style.display="none";
-        viewCompleted.style.display= "block";   
-    }
-  }
-  
-</script>
-
 </head>
 <body>
-
     <main>
+    <div class="card" id="active">
+        <div class="header"><h2>To Do List</h2></div> 
+            <ul id="taskList">
+                <li>Hit the gym</li>
+                <li class="checked">Pay bills</li>
+                <li>Meet George</li>
+                <li>Buy eggs</li>
+                <li>Read a book</li>
+                <li>Organize office</li>
+            </ul>
 
-<div class="card" id="active">
-    <h2>To Do List</h2>
-  <img src="falls.jpg" alt="Avatar" style="width:100%">
-  <div class="container">
-    <button onclick="toggleView('all')">All</button>
-    <button onclick="toggleView('completed')">Completed</button> 
-  </div>
+        <input type="text" id="newTask" placeholder="New Task">
+        <span class="addBtn" onclick="addNewTask()">Add</span><br>
+        <div class="container">
+            <button onclick="toggleView('all')">All</button>
+            <button onclick="toggleView('completed')">Completed</button> 
+        </div>
+        <br>
 </div>
 
 <div class="card" id="completed">
-    <h2>Completed </h2>
-    <img src="falls.jpg" alt="Avatar" style="width:100%">
-    <div class="container">
-        <button onclick="toggleView('all')">All</button>
-        <button onclick="toggleView('active')">Active</button>  
-    </div>
+    <div class="header"><h2>Completed Tasks</h2></div> 
+            <ul id="taskList">
+                <!-- <li>Hit the gym</li>
+                <li class="checked">Pay bills</li>
+                <li>Meet George</li>
+                <li>Buy eggs</li>
+                <li>Read a book</li>
+                <li>Organize office</li> -->
+            </ul>
+
+        <!-- <input type="text" id="newTask" placeholder="New Task">
+        <span class="addBtn" onclick="addNewTask()">Add</span><br> -->
+        <div class="container">
+            <button onclick="toggleView('all')">All</button>
+            <button onclick="toggleView('active')">Active</button> 
+        </div>
+        <br>
   </div>
 
   <div class="card" id="all">
-    <h2>All Tasks</h2>
-    <img src="falls.jpg" alt="Avatar" style="width:100%">
-    <div class="container">
-        <button onclick="toggleView('active')">Active</button>  
-        <button onclick="toggleView('completed')">Completed</button>
-    </div>
+    <div class="header"><h2>All Tasks</h2></div> 
+            <ul id="taskList">
+                <!-- <li>Hit the gym</li>
+                <li class="checked">Pay bills</li>
+                <li>Meet George</li>
+                <li>Buy eggs</li>
+                <li>Read a book</li>
+                <li>Organize office</li> -->
+            </ul>
+
+        <!-- <input type="text" id="newTask" placeholder="New Task">
+        <span class="addBtn" onclick="addNewTask()">Add</span><br> -->
+        <div class="container">
+            <button onclick="toggleView('all')">Completed</button>
+            <button onclick="toggleView('active')">Active</button> 
+        </div>
+        <br>
   </div>
 </main>
-  <script src="main.js" type="module">
-     
+  <script src="main.js">
+    
   </script>
 </body>
 </html> 
