@@ -140,3 +140,9 @@ input {
 #taskCnt{
   padding-right:10px;
 }
+
+.deleted{
+  background-color: crimson;
+  color: black;
+  text-decoration: line-through;
+}
