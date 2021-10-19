@@ -10,6 +10,7 @@
     <div class="card" id="active">
         <div class="header"><h2>To Do List</h2></div> 
             <ul id="taskList">
+                <!-- sample list -->
                 <li>Hit the gym</li>
                 <li class="checked">Pay bills</li>
                 <li>Meet George</li>
@@ -17,12 +18,15 @@
                 <li>Read a book</li>
                 <li>Organize office</li>
             </ul>
-
+            <br>
         <input type="text" id="newTask" placeholder="New Task">
-        <span class="addBtn" onclick="addNewTask()">Add</span><br>
-        <div class="container">
-            <button onclick="toggleView('all')">All</button>
-            <button onclick="toggleView('completed')">Completed</button> 
+        <span class="addBtn" onclick="addNewTask()">Add</span>
+        <br>
+        <br>
+        <div class="container">             
+            <span id="taskCnt"></span>
+            <button class="tglBtn" onclick="toggleView('all')">All</button>
+            <button class="tglBtn"onclick="toggleView('completed')">Completed</button> 
         </div>
         <br>
 </div>
@@ -41,8 +45,8 @@
         <!-- <input type="text" id="newTask" placeholder="New Task">
         <span class="addBtn" onclick="addNewTask()">Add</span><br> -->
         <div class="container">
-            <button onclick="toggleView('all')">All</button>
-            <button onclick="toggleView('active')">Active</button> 
+            <button class="tglBtn" onclick="toggleView('all')">All</button>
+            <button class="tglBtn" onclick="toggleView('active')">Active</button>
         </div>
         <br>
   </div>
@@ -61,8 +65,8 @@
         <!-- <input type="text" id="newTask" placeholder="New Task">
         <span class="addBtn" onclick="addNewTask()">Add</span><br> -->
         <div class="container">
-            <button onclick="toggleView('all')">Completed</button>
-            <button onclick="toggleView('active')">Active</button> 
+            <button class="tglBtn" onclick="toggleView('completed')">Completed</button>
+            <button class="tglBtn" onclick="toggleView('active')">Active</button> 
         </div>
         <br>
   </div>
