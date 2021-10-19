@@ -106,26 +106,26 @@ function addNewTask(){
     document.getElementById("taskListAll").innerHTML=outputString;      
   }
 
-//   function showCompletedTasks(){
-//     var outputString ="";
-//     for(var i=0;i<todoList.length;i++){
-//       if ((todoList[i].checked)===true){
-//           outputString += `<li class="checked">  ${todoList[i].key} </li>`;
-//     //   }else if((todoList[i].deleted)===true){
-//     //       outputString += `<li class="deleted">  ${todoList[i].key} </li>`;
-//     //   }else{
-//     //       outputString += `<li>  ${todoList[i].key} </li>`;
-//       }
-//   }
-//   document.getElementById("taskListAll").innerHTML=outputString;      
-// }
+  function showCompletedTasks(){
+    var outputString ="";
+    for(var i=0;i<todoList.length;i++){
+      if ((todoList[i].checked)===true){
+          outputString += `<li class="checked">  ${todoList[i].key} </li>`;
+    //   }else if((todoList[i].deleted)===true){
+    //       outputString += `<li class="deleted">  ${todoList[i].key} </li>`;
+    //   }else{
+    //       outputString += `<li>  ${todoList[i].key} </li>`;
+      }
+  }
+  document.getElementById("taskListComplete").innerHTML=outputString;      
+}
 
   //toggle between views
   function toggleView(view){
     var viewAll = document.getElementById("all");
     var viewActive = document.getElementById("active");
     var viewCompleted = document.getElementById("completed");
-    
+
     if(view === 'active'){
         viewActive.style.display="block";
         viewAll.style.display="none";
@@ -136,16 +136,18 @@ function addNewTask(){
         viewCompleted.style.display= "none";
         viewActive.style.display= "none";
         viewAll.style.display="block";
-        showAllTasks();
-        upDateTaskCnt();         
+        
+        upDateTaskCnt();   
+        showAllTasks();      
     }
     
     if(view === 'completed'){
         viewActive.style.display="none";
         viewAll.style.display="none";
         viewCompleted.style.display= "block"; 
-        showCompletedTasks();
+        
         upDateTaskCnt(); 
+        showCompletedTasks();
     }
   }
 
@@ -159,7 +161,7 @@ function addNewTask(){
         var displayValue= myTaskList[i].style.display;
         var ch = myTaskList[i].classList.contains('checked');
        
-        if(myTaskList[i].classList.contains('checked')){
+        if(ch){
              todoList[i].checked=true;
         }
         if(myTaskList[i].style.display==='none'){
