@@ -39,12 +39,12 @@ for ( var i = 0; i < close.length; i++) {
     var div = this.parentElement;
     div.style.display = "none";
     div.className="deleted"; 
-    todoList[i].deleted=true;
+    // todoList[i].deleted=true;
     upDateTaskCnt();
   }
 }
 var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
+list.addEventListener("click", function(ev) {
 
   if (ev.target.tagName === 'LI') {
       
@@ -54,6 +54,7 @@ list.addEventListener('click', function(ev) {
   }
 }, false);
 
+document.getElementById('addBtn').addEventListener("click", addNewTask());
 // upDateTaskCnt();
 
 
@@ -113,11 +114,13 @@ function addNewTask(){
             div.style.display="none";           
         }
     }
+    
     todoList.push({
         key: inputValue,
         deleted: false,
         checked: false,        
     });
+    // console.log(todoList[todoList.length].key);
     upDateTaskCnt();
  }
 
