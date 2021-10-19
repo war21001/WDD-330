@@ -11,12 +11,12 @@
         <div class="header"><h2>To Do List</h2></div> 
             <ul id="taskList">
                 <!-- sample list -->
-                <li>Hit the gym</li>
+                <!-- <li>Hit the gym</li>
                 <li class="checked">Pay bills</li>
                 <li>Meet George</li>
                 <li>Buy eggs</li>
                 <li>Read a book</li>
-                <li>Organize office</li>
+                <li>Organize office</li> -->
             </ul>
             <br>
         <input type="text" id="newTask" placeholder="New Task">
@@ -45,6 +45,7 @@
         <!-- <input type="text" id="newTask" placeholder="New Task">
         <span class="addBtn" onclick="addNewTask()">Add</span><br> -->
         <div class="container">
+            <span id="taskCntCompleted"></span>
             <button class="tglBtn" onclick="toggleView('all')">All</button>
             <button class="tglBtn" onclick="toggleView('active')">Active</button>
         </div>
@@ -65,6 +66,7 @@
         <!-- <input type="text" id="newTask" placeholder="New Task">
         <span class="addBtn" onclick="addNewTask()">Add</span><br> -->
         <div class="container">
+            <span id="taskCntAll"></span>
             <button class="tglBtn" onclick="toggleView('completed')">Completed</button>
             <button class="tglBtn" onclick="toggleView('active')">Active</button> 
         </div>

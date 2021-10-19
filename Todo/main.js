@@ -15,7 +15,6 @@ var close = document.getElementsByClassName("close");
 for ( var i = 0; i < close.length; i++) {
   close[i].onclick = function() {
     var div = this.parentElement;
-    div.className = "delete";
     div.style.display = "none";
 
     upDateTaskCnt();  
@@ -28,42 +27,6 @@ list.addEventListener('click', function(ev) {
     upDateTaskCnt();  
   }
 }, false);
-
-// import ToDo from "./todo.js";
-
-// // create toDoList
-// var toDoList = [];
-
-
-// toDoList[toDoList.length++] = new ToDo("0", "laundry", false, false);
-// // toDoList[listCnt].addTodo();
-// // console.log(listCnt);
-// // toDoList[listCnt].getTodos();
-// toDoList[0].markComplete();
-// // toDoList[listCnt].getTodos();
-
-// toDoList[toDoList.length++] = new ToDo("1", "dishes", false, false);
-// // toDoList[listCnt].addTodo();
-// // toDoList[listCnt].getTodos();
-// // toDoList[listCnt].markComplete();
-// // // toDoList[listCnt].getTodos();
-// toDoList[1].deleteToDo();
-
-// toDoList[toDoList.length++] = new ToDo("2", "dust", false, false);
-
-// for(var i=0;i<toDoList.length;i++){
-//     toDoList[i].getTodos();
-// }
-
-// // toDoList[1].getTodos();
-// // toDoList[2].getTodos();
-
-// // function addNewTask(){
-// //     var li = document.createElement("li");
-// //     var inputValue = document.getElementById("myInput")
-
-// // }
-
 
 function addNewTask(){
     var li = document.createElement("li");
@@ -88,7 +51,8 @@ function addNewTask(){
     for (var i=0; i < close.length; i++){
         close[i].onclick=function(){
             var div = this.parentElement;
-            div.style.display="none";            
+            div.style.display="none";   
+            upDateTaskCnt();         
         }
     }
     upDateTaskCnt();  
@@ -123,14 +87,16 @@ function addNewTask(){
   function upDateTaskCnt(){
     var myTaskList = document.getElementsByTagName("LI");
     var taskCnt =  myTaskList.length;
-    console.log(taskCnt);
+    // console.log(taskCnt);
+    
     for (var i=0; i < myTaskList.length; i++){
-        console.log("for loop");
-        if (myTaskList[i].classList.contains('checked')  || (myTaskList[i].classList.contains('delete'))){
+        var displayValue= myTaskList[i].style.display;
+        console.log(`display value=${displayValue}`);
+        if (myTaskList[i].classList.contains('checked') || (displayValue==="none")){
             taskCnt--;
     }}
     console.log(taskCnt);
-    document.getElementById("taskCnt").innerHTML = taskCnt + " Tasks Left";
-
-    
+    document.getElementById("taskCnt").innerHTML = taskCnt + " Tasks Left"; 
+    document.getElementById("taskCntCompleted").innerHTML = taskCnt + " Tasks Left"; 
+    document.getElementById("taskCntAll").innerHTML = taskCnt + " Tasks Left"; 
   }
