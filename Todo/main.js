@@ -2,12 +2,6 @@
 // import ToDo from "./todo.js";
 
 
-//event Listners
-
-// document.getElementById('addBtn').addEventListener("click", addNewTask());
-// upDateTaskCnt();
-
-
 var myTaskList = document.getElementsByTagName("LI");
   
 var todoList = [];
@@ -58,11 +52,6 @@ list.addEventListener("click", function(ev) {
      upDateTaskCnt();
   }
 }, false);
-
-// var c = document.querySelector('.close');
-// c.addEventListener("click", function(){
-
-// })
 
 document.getElementById('addBtn').addEventListener("click", addNewTask());
 
