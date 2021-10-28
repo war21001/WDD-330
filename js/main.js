@@ -27,6 +27,10 @@ function showNav(){
           label: "To Do List",
           url: "Todo/todo.html"
         },
+        {
+          label: "Week 7 Notes",
+          url: "Week7/week7.html"
+        },
     ];    
     //finds the ordered list in the index page
     const ul= document.querySelector("ul");
