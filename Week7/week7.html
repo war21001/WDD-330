@@ -112,25 +112,151 @@
                                 reject(error);
                             }
                         });</pre></li>
-                <li></li> 
+                        <li>Async Functions: await operator</li>
+                        <li>Generalized Functions- Callbacks</li>
+                        <li>Functions can return functions</li>
                     </ul>
-
-                </li>  
-                <li></li>
-                <li></li> 
+            <h4>Closures</h4>            
+            <ul>                
+                <li>Function Scope</li>
+                <li>Returning Functions</li>  
+                <li>closure is formed when the inner functions is returned by the outer function, maintaining access to any variables declared inside the enclosing function.</li>
+                <li>Generators - special functions used to produce iterators that maintian the state value. funtion*</li> 
+                <li><pre>function* fibonacci(a,b) {
+                    let [ prev,current ] = [ a,b ];
+                    while(true) {
+                        [prev, current] = [current, prev + current];
+                        yield current;
+                    }
+                }</pre></li>
             </ul>
-        <!-- <h4></h4>            
+            <h4>Functional Programming</h4>
             <ul>
-                
+                <li>functions being first-class objects</li>  
+                <li>ability to pass functions as arguments</li>
+                <li>return functions from other functions</li> 
+                <li>anonymous functions and closures</li>
+                <li>programming paradigm</li>
+                <li>Pure Functions
+                    <ol>
+                        <li>return value only depend on values provided as arguments</li>
+                        <li>no side-effects. Function doesn't change any values or data elsewhere in the program</li>
+                        <li>referential transparency. Given the same agruements, a pure function will always return the same result</li>
+                    </ol>
+                        <li>must haves: at least one argument; otherwise the return value must depend on something other than the arguments of the function, breaking the first rule</li>
+                        <li>a return value; otherwiset there is no point to the function.</li>
+                        <li>makes functional programming code more concise and predictable</li>                        
+                </li>
+            </ul>
+            <h4>High-Order Functions</h4>            
+            <ul>                
+                <li>Function that can accept another function as an argument, or return antoher function as a result, or both</li>
+            </ul>
+            <h4>Currying</h4>            
+            <ul>                
+                <li>process that involves the partial application of functions.</li>
+                <li>when not all arguments have been supplied to the function, so it returns another function that retains the arguments already provided, and expects the remaining arguments that were omitted when the original functionis called</li>  
+                <li>All curried functions are hig-ordered</li> 
+            </ul>
+      
+    <h2>Ajax</h2>            
+            <ul>                
+                <li>allows web pages to communicate asynchronously with a server</li>
+                <li>it dynamically updates web pages without reloading</li>  
+                <li>enables data to be sent and received in the background</li>
+                <li>as well as portions of a page to be updated in response to user events, while the rest of the program continues to run</li> 
+            </ul>
+            <h4>Clients and Servers</h4>
+            <ul>
+                <li>client-(ex. web browser) will request a resource(usually a web page) from a sever</li>
+                <li>server- processes the request and sends back a response to the client</li>
+                <li>Ajax allows JavaScript to request resources from a server on behalf of the client</li>
+                <li>The resources requested are usually JSON data or small fragments of text or HTML rather than a whole web page</li>
+                <li>Cross-origin resource sharing (CORS) -  allows resources to be requested from another website outside the original domain </li>
+            </ul>
+            <h4>A Brief History of Ajax</h4>
+            <ul>
+                <li>Ajax = Asynchronous JavaScript and XML</li>
+                <li><strong>Asynchronous</strong>- When a request for data is sent, the program doesn’t have to stop and wait for the response. It can carry on running, waiting for an event to fire when a response is received. By using callbacks to manage this, programs are able to run in an efficient way, avoiding lag as data is transferred back and forth.</li>
+                <li><strong>JavaScript</strong> -JavaScript was always considered a 'front-end' language, not used to communicate with the server. Ajax enabled JavaScript to send requests and receive responses from a server, allowing content to be updated in real time.</li>
+                <li><strong>XML</strong>- When the term Ajax was originally coined, XML documents were often used to return data. Many different types of data can be sent, but by far the most commonly used in Ajax nowadays is JSON, which is more lightweight and easier to parse than XML. (Although it has never really taken off, the term Ajaj is sometimes used to describe the technique.) JSON also has the advantage of being natively supported in JavaScript, so you can deal with JavaScript objects rather than having to parse XML files using DOM methods.</li>
+            </ul>
+            <h4>APIs</h4>
+            <ul>
+                <li>An application programming interface (API) is a collection of methods that allows external access to another program or service</li>
+            </ul>
+            <h4>The Fetch API</h4>
+            <ul>
+                <li> currently a living standard for requesting and sending data asynchronously across a network</li>
+            </ul>
+            <h5>Basic</h5>
+            <ul>
+                <li>fetch() method with one mandatory argument. The URL of the resource wish to fetch</li>
+                <li><pre>fetch('https://example.com/data')
+                    .then( // code that handles the response )
+                    .catch( // code that runs if the server returns an error )</pre></li>
+            </ul>
+             <h5>Response Interface</h5>
+            <ul>
+                <li>The Fetch API introduced the Response interface that deals with the object that’s returned when the promise is fulfilled.</li>
+                <li>Response objects have a number of properties and methods that allow us to process the response effectively.</li>
+            </ul>
+            <h5>Redirects</h5>
+            <ul>
+                <li>The redirect() method can be used to redirect to another URL</li>
+                <li><pre>fetch(url)
+                    .then( response => response.redirect(newURL)); // redirects to another URL
+                    .then( // do something else )
+                    .catch( error => console.log('There was an error: ', error))</pre></li>
+            </ul>
+            <h5>Responses</h5>
+            <ul>
+                <li>Text Responses - text()</li>
+                <li>File Responses - blob()</li>
+                <li>JSON Responses - json()</li>
+                <li>can create own</li>
+            </ul>
+            <h5>Request Interface</h5>
+            <ul>
+                <li>Request()</li>
+                <li>Properties: url, method, headers, mode, cache, credentials, redirect</li>
+            </ul>
+            <h4>Receiving Information</h4>
+            <ul>
+                <li>beginning code to set up:</li>
+                <li><pre><!doctype html>
+                    <html lang='en'>
+                    <head>
+                    <meta charset='utf-8'>
+                    <title>Ajax Example</title>
+                    </head>
+                    <body>
+                    <button id='number'>Number Fact</button>
+                    <button id='chuck'>Chuck Norris Fact</button>
+                    <div id='output'>
+                        Ajax response will appear here
+                    </div>
+                    <script src='main.js'></script>
+                    </body></pre></li>
+            </ul>
+             <h4>Sending Information</h4>
+            <ul>
+                <li>usually sent as a JSON string</li>
+            </ul>
+             <h4>FormData</h4>
+            <ul>
+                <li>The Fetch API includes the FormData interface, which makes it much easier to submit information in forms using Ajax</li>
+            </ul>
+            <h4>A Living Standard</h4>
+            <ul>
+                <li>The Fetch API is, at the time of writing, what is known as a 'living standard', which means that the specification is being developed 'in the wild'. This means that, despite it being available to use, it’s still subject to change as developers, browser vendors and end-users provide feedback about how it works.</li>
                 <li></li>
-                <li></li>  
+            </ul>
+            <!-- <h4></h4>
+            <ul>
                 <li></li>
-                <li></li> 
+                <li></li>
             </ul> -->
-            <!-- <ul> 
-                <li >Testing frameworks - provide a structure to write meaningful test and then run them</li>      
-                <li>Jest</li>
-             </ul> -->
         </main> 
     </div>
     
