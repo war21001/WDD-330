@@ -31,6 +31,10 @@ function showNav(){
           label: "Week 7 Notes",
           url: "Week7/week7.html"
         },
+        {
+          label: "Week 8 Notes",
+          url: "Week8/week8.html"
+        },
     ];    
     //finds the ordered list in the index page
     const ul= document.querySelector("ul");
