@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 9 Notes</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header><h1>Week 9 Notes</h1></header>
+    <div class="week1">
+    <main>   
+        <a href="../javascript30-drums/index-START.html">Team Activity</a>
+        
+        <h2>Window Object</h2>
+        <h4>The Browser Object</h4>
+            <ul>
+                <li>Collection of properties and methods that contain infomation about the browser and computer screen</li>
+                <li>No official standard</li>
+                <li>number of properites and methods taht are supported by all major browsers, making a sort of de facto standard</li>
+                <li>available through window object</li>
+                <li>Node.js does not have a window object - global</li>
+                <li>Going Global</li>
+                <li>
+                    <ul>
+                        <li>global variables - const, let and var keywords</li>
+                        <li>global variables are part of a global object - >any global variles are part fo the window object</li>
+                    </ul>
+                </li>
+                <li>Dialogs</li>
+                <li>
+                    <ul>
+                        <li>alert(), confirm(), prompt()</li>
+                        <li>stops the program until user responds</li>
+                    </ul>
+                </li>
+            </ul>
+        <h4>Browser Information</h4>
+            <ul>
+                <li>the window object has a number of properties and methods that porvide information about the user's browser</li>
+                <li>window.navigator.userAgent - returns info about the browser and operating system being used</li>
+                <li>can be modified</li>   
+                <li>location, location,location</li>   
+                    <ul>
+                        <li>window.location - object that contains info about the URL of the current page</li>
+                        <li>properties - href, portocol, host, hostname, port, portname, search, has, origin</li>
+                        <li>methods - reload(). replace(), assign(), toString()</li>
+                    </ul>
+            </ul>
+        <h4>Browser History</h4>
+            <ul>
+                <li>windows.history property - used to access previously visited pages in the current browser session</li>
+                <li>windows.history.length - shows how many pages have been visited before arriving at the current page</li>
+                <li>window.history.go() - used to got to a specific page, ..where()  - is the current page, ..forward(), ..back() - navigate forward & backward</li>        
+            </ul>
+        <h4>Controlling Windows</h4>
+            <ul>
+                <li>open() - opens new windo ->URL, window title, list attributes</li>
+                <li>close() - used to close a window</li>
+                <li>moveTo() - move the window in the screen</li>
+                <li>resizeTo() - resize the window</li>    
+            </ul>        
+        <h4>Screen Information</h4>
+            <ul>
+                <li>window.screen - info about the screen the browser is displayed on</li>
+                <li>.screen.height & .width - dimensions</li>
+                <li>.screen.availHeight & .availWidth</li>
+                <li>colorDepth - color bit depth of the user's monitor</li>      
+            </ul>  
+        <h4>Document Object</h4>
+            <ul>
+                <li>contained in each window object</li>
+                <li>document.write() - write string, replaces what was previously on page</li>
+                <li>don't use</li>      
+            </ul>  
+        <h4>Cookies</h4>
+            <ul>
+                <li>small files saved locally on a user's computer</li>
+                <li>restriction is they can only be read by the web page from the same domain that set them</li>
+                <li>limited to 4KB data</li>
+                <li>Used to personalize a browser's experience</li>   
+                <ul>
+                    <li>store user preferences</li>    
+                    <li>tracker user choices</li> 
+                    <li>autheniticate</li> 
+                    <li>track users</li> 
+                    <li>retain state</li> 
+                </ul>   
+                <li>text file that contains a list of name-vailue pairs seperated by semi colons</li>    
+            </ul>  
+        
+        </main> 
+    </div>
+    
+    <hr />
+    <footer>
+      <!-- <div class="internal_link"><p><a href="#CSAssign">Go Back to the Top</a></p></div> -->
+      <div class="copyright">
+        <p>&copy; 2021 Portfolio- Lisa Ward WDD330- Web FrontEnd II
+      </p>
+    </div>
+    </footer>
+
+</body>
+
+</html>
