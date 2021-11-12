@@ -103,8 +103,62 @@
                 <li>setTimeOut()</li>
                 <li>clearTimeOut()</li>
                 <li>setInterval()</li>   
-                <li><a href="../Week9/example.html"></a>Rotating Square Example</li>   
+                <li><a href="../Week9/example.html">Rotating Square Example</a></li> 
+                <li>CSS is the better place to do animations</li>  
             </ul>  
+    <h2>HTML 5 APIs</h2>
+        <h4>data- Attribute</h4>
+        <ul>
+            <li>way of embedding data in a web page using custom attributes that are ignored by the browser</li>
+            <li>private to a page</li>
+            <li><pre>
+                data-powers = 'flight superSpeed'
+                data-rating = '5' 
+                data-dropdown 
+                data-user = 'DAZ' 
+                data-max-length = '32'</pre>
+            </li>  
+        </ul>   
+        <h4>HTML5 APIs</h4>
+            <ul>
+                <li>Hardware evolves quickly, and APIs are frequently introduced to give developers access, and control new features that appear in the latest devices.</li>
+                <li>best practice to use feature detection before using any of the API methods.</li>      
+            </ul>     
+        <h4>HTML5 Web Storage- localStorage, Geolocation, Web Workers</h4>
+            <ul>
+                <li>provides a key-value store on the client’s computer that is similar to using cookies but has fewer restrictions</li>
+                <li>more storage capacity</li>   
+                <li>crucial differences with cookies</li> 
+                <ul>
+                    <li>Information stored is not shared with the server on every request.</li>
+                    <li>Information is available in multiple windows of the browser (but only if the domain is the same)</li>
+                    <li>Storage capacity limit is much larger than the 4KB limit for cookies ( There is no actual limit in the specification, but most browsers have a limit set at 5GB per domain.)</li>
+                    <li>Any data stored does not automatically expire as it does with cookies. This potentially makes cookies a better choice for something like showing a popup once a day.</li>
+                </ul>  
+            <li>the window object will have a property called localStorage, which is a native object with a number of properties and methods used to store data.</li>
+            <li>nformation is saved in the form of key-value pairs, and the values can only be strings. </li>
+            <li>Every time a value is saved to local storage, a storage event is fired.</li>
+            <li>Geolocation - geographical location. </li>
+            <li>Web workers use the concept of messages to communicate back and forth between the main script and worker script</li>
+            <li><a href="../Week9/factor.html">Web Worker Example</a></li> 
+            <li><a href="../Week9/websocket.html">Websocket Example</a></li>
+            <li>Notification API allows you to show messages using the system's notifications - popup in the corner of the screen</li>
+        </ul> 
+        <h4>Other APIs</h4>
+        <ul>
+            <li>The list of APIs is constantly growing, and includes APIs for accessing a device’s camera, uploading files, accessing the battery status, handling push notifications, building drag-and-drop functionality, creating 3D effects with WebGL, and many more!</li>
+        </ul>
+        <h4>Drawing with Canvas</h4>
+        <ul>
+            <li>A canvas element is a rectangular element on the web page.</li>
+            <li><li><a href="../Week9/canvas.html">Canvas Drawing Example</a></li></li>
+        </ul>
+        <h4>Shims and Polyfills</h4>
+        <ul>
+            <li>These are libraries of code that allow you to use the APIs as usual. They then fill in the necessary code that's not provided natively by the user’s browser.</li>
+            <li>shim is a piece of code that adds some missing functionality to a browser, although the implementation method may differ slightly from the standard API</li>
+            <li>A polyfill is a shim that achieves the same functionality, while also using the API commands that would be used if the feature was supported natively.</li>
+        </ul>
         </main> 
     </div>
     
