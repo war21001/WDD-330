@@ -1,0 +1,13 @@
+body {
+    background-color: rgb(196, 239, 250);
+}
+.quakeList {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  .quakeList li {
+    margin: 0.5em 0;
+  }
+  .quakeList div {
+    font-size: 0.8em;
+  }
