@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 10 Notes</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header><h1>Week 10 Notes</h1></header>
+    <div class="week1">
+    <main>                
+        <h2>Validating Forms</h2>
+        <h3>Client-Side Form Validation</h4>
+            <ul>
+                <li>Before submitting data to the server, it is important to make sure all required forms inputs are filled out, in the correct format</li>
+                <li>initial check, good user experience - noticable delay if it gets to the server a then rejected</li>
+                <li>Whatever you do -<strong>DO MOBILE FIRST</strong> - start small and scale up</li>
+                <li>not exhaustive security measure.</li>
+            </ul>
+        <h3>What is form Validation?</h3>
+            <ul>
+                <li>required fields</li>
+                <li>specific format is required</li>
+                <li>data entered must be in a specific format or specific way</li>
+                <li>browser/web server will check to see the datat is in the correct format and within the constraints set by the application</li>
+             </ul>
+        <h3>Why Validate?</h3>
+            <ul>
+                <li>get right data, in the right format</li>
+                <li>protect user's data</li>
+                <li>protect ourselves</li>
+                <li>never trust data from a user - a malicious user can still alter the network request</li>
+             </ul>
+        <h3>Types of form Validation - Client-Side</h3>
+             <ul>
+                 <li>Built in form validation - use HTML5 built form validation features</li>
+                 <li>JavaScript - validation is coded using JavaScript. Completely customizable but must create it or use a library</li>
+                 <li></li>
+              </ul>
+        <h3>Built in form Validation</h3>
+              <ul>
+                  <li>use validation attributes on form elements</li>
+                  <li>required</li>
+                  <li>minlength and maxlength</li>
+                  <li>min and max --numbers</li>
+                  <li>type</li>
+                  <li>pattern -- Regular Expressions</li>
+                  <li>CSS-psuedo class :valid or :invalid</li>
+                  <li>Regular Expression- pattern that can be used to match character combinations in text strings</li>
+               </ul>
+        <h3>Validating Forms using JavaScript</h3>
+               <ul>
+                   <li>Constraint Validation API - set of methods and properties available</li>
+                   <li>HTMLButtonElement, HTMLFieldSetElement, HTMLInputElement, HTMLOutputElement, HTMLSelectElement, HTMLTextAreaElement</li>
+                   <li>Properties -- ValidationMessage, validility, willValidate</li>
+                   <li>Methods -- checkValidity(), reportValidility(), preventValidility(), setCustomValidility()</li>
+                </ul>
+        <h3>Questions to consider when not using a built-in API</h3>
+                <ul>
+                    <li>What kind of validation should I perform?</li>
+                    <li>What should I do if the from doesn't validate?</li>
+                    <li>How can I help the user to correct invalid data?</li>
+                    <li>Provide as much helpful information as possible to guide the user</li>
+                 </ul>
+
+        <h2>Using Fetch</h2>
+        <h3>FetchAPI provides a JavaScript interface for accessing and maniputlating parts of the HTTP pipeline, sucha as requests and responses </h3>
+        <ul>
+            <li>global fetch() method -- previously XMLHTTPRequest</li>
+            <li>example:<pre>fetch('http://example.com/movies.json')
+                .then(response => response.json())
+                .then(data => console.log(data));</pre></li>
+            <li>fetch a JSON file across the network - takes one parameter, the path to the resource - returns a promise that resolves with a Response Object</li>
+            <li>The Reponse Object, does not directly contain the actual JSON response body but instead a representation of the entire HTTP response.</li>
+            <li>to extract the JSON Body Content from the Response Object using json() method that returns a second promise that resolves with the result of parsing the reponse body text as JSON</li>
+         </ul>
+         <h3>Supplying Request options</h3>
+         <ul>
+             <li>Optional second parameter --  init</li>
+             <li>credentials: 'include'</li>
+         </ul>
+         
+        </main> 
+    </div>
+    
+    <hr />
+    <footer>
+      <!-- <div class="internal_link"><p><a href="#CSAssign">Go Back to the Top</a></p></div> -->
+      <div class="copyright">
+        <p>&copy; 2021 Portfolio- Lisa Ward WDD330- Web FrontEnd II
+      </p>
+    </div>
+    </footer>
+
+</body>
+
+</html>
