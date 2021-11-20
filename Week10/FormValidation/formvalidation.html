@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="styles.css" />
+    <title>Form Validation</title>
+    <style>
+      /* input:invalid {
+        border: 2px dashed red;
+      } */
+/* 
+      input:invalid:required {
+        background-image: linear-gradient(to right, pink, lightgreen);
+      }*/
+
+      input:valid {
+        border: 2px solid black;
+      } 
+    </style>
+</head>
+<body>
+
+  
+  <div id="content">
+    <header>
+      <div class="logo-box">
+        <h1><strong>Form Validation</strong></h1>
+      </div>
+    </header>
+    <br>
+    <main>
+     
+    <!-- make the form for input, using a table -->
+      <form name="form" class="custom_form" > 
+        <fieldset>
+          <legend>Customer Information</legend>
+          <div class="item">
+            <label for="first_name">Name<span>*</span></label>
+            <div class="name-item">
+              <input id="first_name" type="text" name="first_name" placeholder="First" required/>
+              <div id="first_name_error"></div>
+              <input id="last_name" type="text" name="last_name" placeholder="Last" required/>
+              <div id="last_name_error"></div>
+            </div>
+          </div>
+          
+          <div class="item">
+            <label for="address">Address<span>*</span></label><br>
+            <textarea id="address"  name="address" cols="20" rows="4" placeholder="Address" required ></textarea>
+          </div> <div id="address_error"></div>
+          <div class="item">
+            <label for="phone">Phone Number<span>*</span></label>
+            <input id="phone" type="text" name="phone" placeholder="555-555-5555" oninput="ph_check()" required/>
+            <div id="phone_error"></div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Product Information</legend>
+          <div class="product">
+            <label><strong>Cookies</strong></label><br>
+            <input type="checkbox" name="item_0" value="Chocolate Chip" id="item_0"> Chocolate Chip   $1.99<br>
+            <input type="checkbox" name="item_1" value="Frosted Sugar Cookie" id="item_1"> Frosted Sugar Cookie   $2.99<br>
+            <input type="checkbox" name="item_2" value="Peanut Butter Chunk" id="item_2"> Peanut Butter Chunk   $2.25<br>
+            <input type="checkbox" name="item_3" value="Snickerdoodle" id="item_3"> Snickerdoodle   $1.50<br>
+            <input type="checkbox" name="item_4" value="Weekly Special" id="item_4"> Week's Special   $2.50<br>
+                       
+   <!-- script for calculating total cost of Cookies -->
+            <br>
+            <strong>Total: </strong><div id="total"></div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Credit Card Information</legend>
+        <div class="credit_card_info">
+          <label>Credit Card Type:</label>
+          <br>
+          <input type="radio" name="card" value="Visa" required>Visa
+          <input type="radio" name="card" value="Discover" required>Discover
+          <input type="radio" name="card" value="Mastercard" required>Mastercard
+          <input type="radio" name="card" value="American Express" required>AmEx
+          <br>
+          <br>
+          <label for="credit_card">Credit Card Number: <span>*</span></label>
+          <input type="text" id="credit_card" name="credit_card" size="20" oninput="cc_check()" placeholder="1111 1111 1111 1111" required/>
+          <div id="credit_card_error"></div>        
+          <label for="exp_date">Expiration Date:<span>*</span></label>
+          <input type="text" id="exp_date" name="exp_date" size="20" placeholder="00/0000" oninput="expDate_check()" required/>
+          <div id="exp_date_error"></div>
+        </div>
+          <div class="buttons">
+            <button type="reset" id="reset" onclick="focusInput()">Reset</button>             
+            <button type="button" id="submit" onclick="checkFields()">Submit</button>
+         </div>
+        </fieldset>
+      </form>
+      
+    </main>
+    <hr>
+    <footer>
+      <!-- <div class="internal_link"><p><a href="#CSAssign">Go Back to the Top</a></p></div> -->
+      <div class="copyright">
+        <p>&copy; 2021 Portfolio- Lisa Ward WDD330- Web FrontEnd II
+      </p>
+    </div>
+    </footer>
+  </div> 
+  <script src="formValidation.js"></script>
+  </body>
+
+</html>

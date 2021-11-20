@@ -1,0 +1,112 @@
+#content {
+    max-width: 1160px;
+    margin: 0 auto;
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+  body {
+      font-family: Helvetica, Arial, sans-serif;
+      min-width: 320px;   
+      max-width: 1160px;
+      margin: 0 auto;   
+  }
+  
+  /* h1,h2,h3,h4,h5,h6 {
+      font-family: 'Lora';
+      background-color: lightsteelblue;
+      padding: 1em;
+  
+  } */
+  header{
+      font-family: 'Lora';
+      background-color: lightsteelblue;
+      padding: 1em;
+      text-align: center;
+      
+  }
+  
+  main{
+      /* background-color: lightsteelblue; */
+      display: grid;
+      /* grid-template-columns: 1fr 1fr; */
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  
+ .custom_form{
+     background: lemonchiffon;
+     padding:1em;
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr;
+     
+      }
+.customer_info{
+  grid-column: 1;
+  justify-content: center;
+}
+
+.products{
+  grid-column:2;
+  justify-content: center;
+}
+.credit_card_info{
+  grid-column:3;
+}
+h1{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+ 
+ td{
+      padding: .3em;
+      /* margin-left: 25em; */
+  }
+button{
+      align-items:stretch;
+      font-family:Georgia, 'Times New Roman', Times, serif;
+      background-color: darksalmon;
+      border-radius: 15px 15px 15px 15px;
+      padding: .50em;
+      margin-left: 12px;
+  }
+#phone_error, #credit_card_error, #exp_date_error, #first_name_error, #last_name_error, #address_error{
+    color:red;
+    font-family: serif;
+}
+.confirmation{
+  background-color: lemonchiffon;
+  padding:.25em;
+}
+h2{
+  background-color: lemonchiffon;
+}
+
+  /* Footer Styles */
+  footer{
+    text-align: center;
+    grid-column: 1 /span 2;
+    grid-row: 3;
+    font-family: 'Lora';
+}
+  .copyright{
+    flex: 1; 
+    align-self: flex-start;
+    padding:.25em;
+    margin-left:6px;
+  }
+ 
+  .assign_link a{
+    flex: 3;
+    margin-top:6px;
+    margin-right:8px;
+    align-self: flex-end;
+    padding:.25em;
+  }
+
+  @media screen and (max-width: 850px) {  
+    /* beginning of media query */
+         .custom_form {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+        
+    } 
