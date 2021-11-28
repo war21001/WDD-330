@@ -43,6 +43,10 @@ function showNav(){
           label: "Week 10 Notes",
           url: "Week10/week10.html"
         },
+        {
+          label: "Final Project",
+          url: "Final/index.html"
+        },
     ];    
     //finds the ordered list in the index page
     const ul= document.querySelector("ul");
