@@ -16,40 +16,42 @@
       <div class="content">
       <div class="search">
         <label><strong>What ingredient do you have: </strong></label>
-        <input type="text"><button>Search</button>
+        <input type="text" size="20" id="ingredient" required>
+        <button type="button" onclick="clickButton()"><strong>Search</strong></button>
       </div>
 
       <div class="recipe-info">
-      <div class="results">
+      <div class="results" id="results">
         <h2>Results</h2>
       </div>
 
-      <div class="recipe-title">
+      <div class="recipe-title" id="recipe-title">
         <h2>Recipe Title</h2>
       </div>
 
-      <div class="recipe">
+      <div class="recipe" id="recipe">
         <h2>Recipe</h2>
       </div>
 
-      <div class="picture">
+      <div class="picture" id="picture">
         <h2>Picture</h2>
       </div>
     </div>
   </div>
     </main>
-
+    <script src="main.js"></script>
     <hr />
     <footer>
       <!-- <div class="internal_link"><p><a href="#CSAssign">Go Back to the Top</a></p></div> -->
       <div class="copyright">
         <p>&copy; 2021 Portfolio- Lisa Ward WDD330- Web FrontEnd II
       </p>
-      <p>Photo credits: Photo by <a href="https://unsplash.com/@yaopey?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Yaopey Yong</a> on <a href="https://unsplash.com/s/photos/variety-fruit-and-vegetables?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a><br>
+      <div class="photo-credits"><p>Photo credits: Photo by <a href="https://unsplash.com/@yaopey?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Yaopey Yong</a> on <a href="https://unsplash.com/s/photos/variety-fruit-and-vegetables?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a><br>
         Photo by <a href="https://unsplash.com/@jsnbrsc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jason Briscoe</a> on <a href="https://unsplash.com/s/photos/kitchen-background?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
       </p>
     </div>
+    </div>
     </footer>
-    <hr />
+    <hr/>
 </body>
 </html>
