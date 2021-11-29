@@ -5,7 +5,7 @@ function handleResponse(json){
     // console.log('this is the json data', movies);
     var list='<ul>';
     for(const movie in movies){
-        // console.log(`${movie}: ${movies[movie].title}`);
+        console.log(`${movie}: ${movies[movie].title}`);
         list += `<li>${movies[movie].title}</li>`;
     }
     list += `</ul>`;
