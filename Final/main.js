@@ -12,6 +12,11 @@ var recipeList = [];
 
 
 function clickButton(){
+    //clear out recipe results for a new search
+    document.getElementById("recipe-title").style.display="none";
+    document.getElementById("recipe").style.display="none";
+    document.getElementById("picture").style.display="none";
+    
     let ingredient = document.getElementById("ingredient").value;
     let url="https://edamam-recipe-search.p.rapidapi.com/search?q=" + ingredient;
     // console.log(url);
@@ -50,6 +55,7 @@ function handleResponse(json){
 
 document.querySelector("body").addEventListener('click', function(e) {
     // console.log("made it here");
+
     var anchor = e.target.closest('a').text;
     // console.log(anchor);
     if(anchor !==null){
@@ -63,7 +69,7 @@ document.querySelector("body").addEventListener('click', function(e) {
                     list += `<li>${recipeList[rec].recipe.ingredientLines[ingredient]}</li>`;
                 }
                 list += `</ul>`;
-                list += `<p>Get the instructions <a href=${recipeList[rec].recipe.url}>Here</a></p>`;
+                list += `<br><p>Get the instructions <a href=${recipeList[rec].recipe.url}>Here</a></p>`;
                 document.getElementById("recipe").innerHTML = list;
                 
                 document.getElementById("picture").style.display="block";
