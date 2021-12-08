@@ -5,6 +5,7 @@
     margin: 0 auto;  
 }
 header{
+    display:block;
     text-align: center;
     background-image: url("yaopey-yong-L5RlYhmWah0-unsplash-cropped.jpg");
     justify-content: center;
@@ -18,9 +19,145 @@ h1{
     background-color: rgb(9, 85, 60);
     padding: .2em;
 }
+/* body{
+    max-height: 500px;
+ }
+  */
+ .content{
+     display: grid;
+     grid-template-columns: 1fr;
+     grid-template-rows: .25fr 5fr;
+     /* gap: 1em; */
+     /* background-image: url("jason-briscoe-GliaHAJ3_5A-unsplash.jpg"); */
+     /* height:70vh; */
+     width: 100%;
+     /* background-size: cover; */
+     /* justify-content: center; */
+     background-color: rgb(9, 85, 60);
+ }
+ 
+ .search{
+     background-color: blanchedalmond;
+     /* opacity: 75%; */
+     align-content: center;
+     padding: .5em;
+     /* grid-column: 1; */
+     grid-row:1;
+     max-width:80%;
+     height: auto;
+     margin: 1em;
+     box-shadow: 5px 5px;
+ }
+ 
+ button{
+     background-color: rgba(10, 149, 173, 0.651);
+     margin:.5em;
+     padding: .75em;
+     border-radius: 18%;
+ }
+ 
+ .recipe-info{    
+     /* grid-column: 1; */
+     grid-row: 2;
+     display: grid;
+     /* grid-template-columns: 1fr; */
+     grid-template-rows: 1fr .25fr 1fr 1fr;
+     max-width: 100%;
+     /* justify-content:left; */
+     /* gap: 5px 5px; */
+     padding: 1em;
+ }
+ 
+ .results{
+     display: none;
+     background-color:  blanchedalmond;
+     padding: .5em;
+     /* grid-column: 1; */
+     grid-row: 1;
+     /* margin: 1em; */
+     width:80%;
+     height: max-content;
+     box-shadow: 5px 5px;
+ }
+ .results ul{
+     padding: .5em;
+     list-style: disc;
+ }
+ .results ul li a{
+     text-decoration: none;
+     color: black;
+     padding: 1em;
+ }
+ .results ul li a:hover{
+     text-decoration: wavy underline red;
+ }
+ 
+ .recipe-title{
+     display: none;
+     background-color:  blanchedalmond;
+     padding: 1em;
+     /* grid-column: 2; */
+     grid-row:2;
+     width:80%;
+     height:max-content;
+     /* align-content: center; */
+     /* margin-bottom: 2rem; */
+     margin-top: 1em;
+     box-shadow: 2px 2px;
+ }
+ .recipe{
+     display: none;
+     background-color:  blanchedalmond;
+     padding: 1em;
+     /* grid-column:2; */
+     grid-row:3;
+     margin-top: 1em;
+     width:80%;
+     height: auto;
+     overflow-y: auto;
+     box-shadow: 5px 5px;
+ 
+ }
+ 
+ .picture{
+     display: none;
+     /* background-color:  #ffffff; */
+     padding: 1em;
+     /* grid-column:2; */
+     grid-row: 4;
+     /* margin-bottom: 5em; */
+     max-width: 60%;
+     height:auto;
+     /* justify-content: center; */
+     /* box-shadow: 2px 2px; */
+ 
+ }
+ img{
+     max-width: 60%;
+     height: auto;
+     box-shadow: 5px 5px;
+ }
+ 
+ footer{
+     color:blanchedalmond;
+     text-align: center;
+     justify-content: center;
+     background-color: rgb(9, 85, 60);  
+ }
+ 
+ .photo-credits a{
+     color: blanchedalmond;
+     text-decoration: none;
+ }
+ 
+ .photo-credits a:hover{
+     color:rgba(10, 149, 173, 0.651);
+ }
 
+
+@media (min-width :800px){
 body{
-   max-height: 500px;
+   max-height:750px;
 }
 
 .content{
@@ -29,20 +166,25 @@ body{
     grid-template-rows: 1fr 5fr;
     /* gap: 1em; */
     background-image: url("jason-briscoe-GliaHAJ3_5A-unsplash.jpg");
-    height:70vh;
+    height:100vh;
     width: 100%;
     background-size: cover;
-    /* justify-content: center; */
+    justify-content: center;
+    align-content: center;
 }
 
 .search{
     background-color: blanchedalmond;
     /* opacity: 75%; */
     padding: .5em;
-    grid-column: 1 / span 3;
+    max-width:50%;
+    grid-column: 1 /span 3;
     grid-row:1;
     height: max-content;
     margin-top: 2em;
+    box-shadow: 5px 5px;
+    justify-self: center;
+    align-content: center;
 }
 
 button{
@@ -56,7 +198,7 @@ button{
     grid-column: 1 / span 3;
     grid-row: 2;
     display: grid;
-    grid-template-columns: 1.75fr 2fr;
+    grid-template-columns: 1fr 2fr;
     grid-template-rows: 8vh 25vh 25vh;
     max-width: 100%;
     /* justify-content:left; */
@@ -67,12 +209,11 @@ button{
 .results{
     display: none;
     background-color:  blanchedalmond;
-    ;
     padding: .5em;
     grid-column: 1;
     /* grid-row: 1 / span 3; */
     /* margin: 1em; */
-    width: 90%;
+    width: 40vh;
     height: max-content;
     box-shadow: 5px 5px;
 }
@@ -122,14 +263,14 @@ button{
     grid-column:2;
     grid-row: 3;
     /* margin-bottom: 5em; */
-    max-width: 60%;
+    max-width: 80%;
     height:auto;
     /* justify-content: center; */
     /* box-shadow: 2px 2px; */
 
 }
 img{
-    max-width: 60%;
+    max-width: 80%;
     height: auto;
     box-shadow: 5px 5px;
 }
@@ -149,3 +290,32 @@ footer{
 .photo-credits a:hover{
     color:rgba(10, 149, 173, 0.651);
 }
+
+/* end media query */
+} 
+
+/* @media (max-width :800px){
+    .content{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: .25fr 1fr 1fr;
+        max-width: auto;
+        background-image: none;
+    }
+
+    .search{
+        grid-row: 1;
+    }
+    .results{
+        grid-row: 2;
+        width: 
+    }
+    .recipe-info{
+        grid-row: 3;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+
+} */
