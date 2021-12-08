@@ -50,6 +50,7 @@ function handleResponse(json){
          list += `<li><a href="#" class="recipeLink">${recipeList[rec].recipe.label}</a></li>`;
      }
      list += `</ul>`;
+     list += `<br><p><a href='#'>Next >></a></p><br>`;
      document.getElementById("recipe-list").innerHTML = list;
  }
 
