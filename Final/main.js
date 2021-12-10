@@ -96,7 +96,7 @@ document.querySelector("body").addEventListener('click', function(e) {
                     list += `<li>${element.recipe.ingredientLines[ingredient]}</li>`;
                 }
                 list += `</ul>`;
-                list += `<br><p>Get the instructions <a href=${element.recipe.url}>Here</a></p>`;
+                list += `<br><p><a href=${element.recipe.url} target="_blank">Get the instructions here</a></p>`;
                 document.getElementById("recipe").innerHTML = list;
                 
                 document.getElementById("picture").style.display="block";
